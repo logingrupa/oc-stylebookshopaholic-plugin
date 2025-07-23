@@ -1,0 +1,24 @@
+plugin:
+    name: 'logingrupa.stylebookshopaholic::lang.plugin.name'
+    description: 'logingrupa.stylebookshopaholic::lang.plugin.description'
+    author: Logingrupa
+    icon: icon-smile-o
+    homepage: ''
+navigation:
+    stylebookshopaholic-menu-main:
+        label: 'logingrupa.stylebookshopaholic::lang.menu.main'
+        url: logingrupa/stylebookshopaholic/ideas
+        permissions:
+            - 'stylebookshopaholic-menu-*'
+        icon: icon-paw
+        sideMenu:
+            stylebookshopaholic-menu-ideas:
+                label: 'logingrupa.stylebookshopaholic::lang.menu.ideas'
+                url: logingrupa/stylebookshopaholic/ideas
+                permissions:
+                    - stylebookshopaholic-menu-ideas
+                icon: icon-paw
+permissions:
+    stylebookshopaholic-menu-ideas:
+        label: 'logingrupa.stylebookshopaholic::lang.permission.idea'
+        tab: 'logingrupa.stylebookshopaholic::lang.tab.permissions'

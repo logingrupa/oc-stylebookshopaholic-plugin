@@ -1,0 +1,29 @@
+# Record name
+name: 'logingrupa.stylebookshopaholic::lang.idea.name'
+
+# Model Form Field configuration
+form: $/logingrupa/stylebookshopaholic/models/idea/fields.yaml
+
+# Model Class name
+modelClass: Logingrupa\StyleBookShopaholic\Models\Idea
+
+# Default redirect location
+defaultRedirect: logingrupa/stylebookshopaholic/ideas
+
+# Create page
+create:
+    title: 'backend::lang.form.create_title'
+    redirect: logingrupa/stylebookshopaholic/ideas/update/:id
+    redirectClose: logingrupa/stylebookshopaholic/ideas
+    flashSave: 'lovata.toolbox::lang.message.create_success'
+
+# Update page
+update:
+    title: 'backend::lang.form.update_title'
+    redirect: logingrupa/stylebookshopaholic/ideas
+    redirectClose: logingrupa/stylebookshopaholic/ideas
+    flashSave: 'lovata.toolbox::lang.message.update_success'
+    flashDelete: 'lovata.toolbox::lang.message.delete_success'
+
+# Preview page
+preview: {  }
