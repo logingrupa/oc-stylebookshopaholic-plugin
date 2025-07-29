@@ -18,6 +18,8 @@ class Ideas extends Controller
     public $listConfig = 'config_list.yaml';
     /** @var string */
     public $formConfig = 'config_form.yaml';
+    /** @var string */
+    public $relationConfig = 'config_relation.yaml';
 
     /**
      * Ideas constructor.
