@@ -21,6 +21,15 @@ fields:
         type: text
 tabs:
     fields:
+        offer:
+            label: 'lovata.shopaholic::lang.field.offer'
+            span: full
+            context:
+                - update
+                - preview
+            type: partial
+            path: ~/plugins/lovata/shopaholic/controllers/products/_offer.htm
+            tab: 'lovata.shopaholic::lang.tab.offer'
         preview_text:
             label: 'lovata.toolbox::lang.field.preview_text'
             size: large
@@ -35,15 +44,15 @@ tabs:
             type: richeditor
             tab: 'lovata.toolbox::lang.tab.description'
         preview_image:
-                label: 'lovata.toolbox::lang.field.preview_image'
-                mode: image
-                useCaption: true
-                thumbOptions:
-                    mode: crop
-                    extension: auto
-                span: left
-                type: fileupload
-                tab: 'lovata.toolbox::lang.tab.images'
+            label: 'lovata.toolbox::lang.field.preview_image'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: left
+            type: fileupload
+            tab: 'lovata.toolbox::lang.tab.images'
         images:
             label: 'lovata.toolbox::lang.field.images'
             mode: image
@@ -55,9 +64,11 @@ tabs:
             type: fileupload
             tab: 'lovata.toolbox::lang.tab.images'
         file:
-            label: 'lovata.toolbox::lang.field.file'
+            label: 'lovata.toolbox::lang.field.video'
             type: fileupload
             span: left
             required: false
             mode: file
-            tab: 'lovata.toolbox::lang.tab.files'
+            tab: 'lovata.toolbox::lang.tab.images'
+            fileTypes: mp4,mov
+            #mimeTypes: video/mp4,video/quicktime
