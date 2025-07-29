@@ -1,7 +1,7 @@
 <?php return [
     'plugin' => [
         'name' => 'Style Book for Shopaholic',
-        'description' => 'Aparaksts',
+        'description' => 'Aparaksts1',
     ],
     'field' => [],
     'menu' => [
