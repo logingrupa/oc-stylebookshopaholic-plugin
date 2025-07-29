@@ -104,7 +104,14 @@ class Idea extends Model
     /** @var array */
     public $belongsTo = [];
     /** @var array */
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'offer' => [
+            'Lovata\Shopaholic\Models\Offer',
+            'table' => 'logingrupa_collection_offer',
+            'key' => 'collection_id',
+            'otherKey' => 'offer_id',
+        ],
+    ];
     /** @var array */
     public $morphTo = [];
     /** @var array */
