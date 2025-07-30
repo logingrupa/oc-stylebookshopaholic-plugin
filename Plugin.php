@@ -24,8 +24,7 @@ class Plugin extends PluginBase
      */
     protected function addEventListener()
     {
-        // Event::subscribe(IdeaCollection::class);
-        // Event::subscribe(IdeaModelHandler::class);
+        Event::subscribe(IdeaModelHandler::class);
     }
 
     /**
@@ -35,8 +34,8 @@ class Plugin extends PluginBase
     {
         return [
             'Logingrupa\StyleBookShopaholic\Components\IdeaData' => 'IdeaData',
-            'Logingrupa\StyleBookShopaholic\Components\IdeaList' => 'IdeaData',
-            'Logingrupa\StyleBookShopaholic\Components\IdeaPage' => 'IdeaData',
+            'Logingrupa\StyleBookShopaholic\Components\IdeaList' => 'IdeaList',
+            'Logingrupa\StyleBookShopaholic\Components\IdeaPage' => 'IdeaPage',
         ];
     }
 }
