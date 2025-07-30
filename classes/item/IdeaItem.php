@@ -65,4 +65,17 @@ class IdeaItem extends ElementItem
 
         return $arPageParamList;
     }
+
+    /**
+     * Get element data
+     * @return array
+     */
+    protected function getElementData()
+    {
+        $arResult = [
+            'offer_list' => $this->obElement->offer()->lists('id'),
+        ];
+
+        return $arResult;
+    }
 }
