@@ -5,6 +5,9 @@ use System\Classes\PluginBase;
 
 use Logingrupa\StyleBookShopaholic\Classes\Collection\IdeaCollection;
 use Logingrupa\StyleBookShopaholic\Classes\Event\Idea\IdeaModelHandler;
+use Logingrupa\StyleBookShopaholic\Classes\Event\BackendMenuHandler;
+
+
 /**
  * Class Plugin
  * @package Logingrupa\StyleBookShopaholic
@@ -25,6 +28,7 @@ class Plugin extends PluginBase
     protected function addEventListener()
     {
         Event::subscribe(IdeaModelHandler::class);
+        Event::subscribe(BackendMenuHandler::class);
     }
 
     /**

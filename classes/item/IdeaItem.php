@@ -74,6 +74,9 @@ class IdeaItem extends ElementItem
     {
         $arResult = [
             'offer_list' => $this->obElement->offer()->lists('id'),
+            'images' => $this->obElement->images,
+            'preview_image' => $this->obElement->preview_image,
+            'file' => $this->obElement->file,
         ];
 
         return $arResult;

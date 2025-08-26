@@ -27,6 +27,6 @@ class Ideas extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Logingrupa.StyleBookShopaholic', 'stylebookshopaholic-menu-main', 'stylebookshopaholic-menu-ideas');
+        BackendMenu::setContext('Lovata.Shopaholic', 'shopaholic-menu-main', 'shopaholic-menu-stylebook');
     }
 }
