@@ -4,20 +4,6 @@ plugin:
     author: Logingrupa
     icon: icon-smile-o
     homepage: ''
-navigation:
-    stylebookshopaholic-menu-main:
-        label: 'logingrupa.stylebookshopaholic::lang.menu.main'
-        url: logingrupa/stylebookshopaholic/ideas
-        permissions:
-            - 'stylebookshopaholic-menu-*'
-        icon: icon-paw
-        sideMenu:
-            stylebookshopaholic-menu-ideas:
-                label: 'logingrupa.stylebookshopaholic::lang.menu.ideas'
-                url: logingrupa/stylebookshopaholic/ideas
-                permissions:
-                    - stylebookshopaholic-menu-ideas
-                icon: icon-paw
 permissions:
     stylebookshopaholic-menu-ideas:
         label: 'logingrupa.stylebookshopaholic::lang.permission.idea'

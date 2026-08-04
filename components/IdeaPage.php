@@ -51,6 +51,6 @@ class IdeaPage extends ElementPage
      */
     protected function makeItem($iElementID, $obElement)
     {
-        return IdeaItem::make($iElementID, $obElement);
+        return IdeaItem::makeNoCache($iElementID, $obElement);
     }
 }

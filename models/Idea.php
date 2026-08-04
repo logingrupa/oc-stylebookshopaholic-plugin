@@ -107,8 +107,8 @@ class Idea extends Model
     public $belongsToMany = [
         'offer' => [
             'Lovata\Shopaholic\Models\Offer',
-            'table' => 'logingrupa_collection_offer',
-            'key' => 'collection_id',
+            'table' => 'logingrupa_stylebookshopaholic_ideas_offers',
+            'key' => 'idea_id',
             'otherKey' => 'offer_id',
         ],
     ];

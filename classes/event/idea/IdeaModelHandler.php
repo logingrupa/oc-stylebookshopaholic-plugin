@@ -1,5 +1,6 @@
 <?php namespace Logingrupa\StyleBookShopaholic\Classes\Event\Idea;
 
+use Kharanenka\Helper\CCache;
 use Lovata\Toolbox\Classes\Event\ModelHandler;
 use Logingrupa\StyleBookShopaholic\Models\Idea;
 use Logingrupa\StyleBookShopaholic\Classes\Item\IdeaItem;
@@ -40,6 +41,7 @@ class IdeaModelHandler extends ModelHandler
 
         $this->clearBySortingPublished();
         $this->clearBySortingViews();
+        $this->clearRenderedHtml();
     }
 
     /**
@@ -54,6 +56,11 @@ class IdeaModelHandler extends ModelHandler
         }
 
         $this->checkFieldChanges('active', IdeaListStore::instance()->active);
+
+        // view_count ticks on every idea view - content HTML unchanged, keep cache
+        if (!$this->isFieldChanged('view_count')) {
+            $this->clearRenderedHtml();
+        }
     }
 
     /**
@@ -69,6 +76,15 @@ class IdeaModelHandler extends ModelHandler
 
         $this->clearBySortingPublished();
         $this->clearBySortingViews();
+        $this->clearRenderedHtml();
+    }
+
+    /**
+     * Clear rendered idea HTML fragments (theme ideas strip)
+     */
+    protected function clearRenderedHtml(): void
+    {
+        CCache::clear([IdeaListStore::CACHE_TAG_RENDERED_HTML]);
     }
 
     /**

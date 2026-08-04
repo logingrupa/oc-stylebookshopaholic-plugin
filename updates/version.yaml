@@ -1,3 +1,6 @@
 1.0.0:
     - 'Init plugin'
     - create_table_ideas.php
+1.0.1:
+    - 'Create pivot table for ideas-offers relationship'
+    - create_table_ideas_offers.php

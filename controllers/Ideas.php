@@ -13,6 +13,7 @@ class Ideas extends Controller
     public $implement = [
         'Backend.Behaviors.ListController',
         'Backend.Behaviors.FormController',
+        'Backend.Behaviors.RelationController',
     ];
     /** @var string */
     public $listConfig = 'config_list.yaml';

@@ -17,6 +17,10 @@ class IdeaListStore extends AbstractListStore
     const SORT_VIEW_COUNT_ASC  = 'view|asc';
     const SORT_VIEW_COUNT_DESC = 'view|desc';
 
+    /** CCache tag for rendered idea HTML fragments (theme ideas strip).
+        Cleared by IdeaModelHandler when an idea is created/changed/deleted. */
+    const CACHE_TAG_RENDERED_HTML = 'idea-rendered-html';
+
     protected static $instance;
 
     /**
