@@ -26,7 +26,7 @@ class IdeaList extends ComponentBase
      * @param array $arElementIDList
      * @return IdeaCollection
      */
-    public function make($arElementIDList = null)
+    public function makeCollection($arElementIDList = null)
     {
         return IdeaCollection::make($arElementIDList);
     }

@@ -4,3 +4,5 @@
 1.0.1:
     - 'Create pivot table for ideas-offers relationship'
     - create_table_ideas_offers.php
+1.0.2:
+  - 'The element-collection factory on the list component is renamed to makeCollection(). Larajax 3.0 adds a static make() factory to the view-component trait that Cms\Classes\ComponentBase uses, so a component declaring its own non-static make() is a fatal error at class declaration. Twig call sites become Alias.makeCollection(...).'
