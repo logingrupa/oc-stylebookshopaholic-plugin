@@ -1,9 +1,12 @@
 <?php namespace Logingrupa\StyleBookShopaholic;
 
+use Config;
 use Event;
 use System\Classes\PluginBase;
 
 use Logingrupa\StyleBookShopaholic\Classes\Collection\IdeaCollection;
+use Logingrupa\StyleBookShopaholic\Classes\Item\IdeaItem;
+use Logingrupa\StyleBookShopaholic\Models\Idea;
 use Logingrupa\StyleBookShopaholic\Classes\Event\Idea\IdeaModelHandler;
 use Logingrupa\StyleBookShopaholic\Classes\Event\BackendMenuHandler;
 
@@ -14,6 +17,16 @@ use Logingrupa\StyleBookShopaholic\Classes\Event\BackendMenuHandler;
  */
 class Plugin extends PluginBase
 {
+    /**
+     * MightySeo reads app.seo_models and app.seo_items when its subscriber
+     * boots, so the idea classes are listed here, before any plugin boot()
+     */
+    public function register()
+    {
+        Config::set('app.seo_models', array_merge((array) Config::get('app.seo_models'), [Idea::class]));
+        Config::set('app.seo_items', array_merge((array) Config::get('app.seo_items'), [IdeaItem::class]));
+    }
+
     /**
      * Plugin boot method
      */

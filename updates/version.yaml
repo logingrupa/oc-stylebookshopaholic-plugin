@@ -6,3 +6,5 @@
     - create_table_ideas_offers.php
 1.0.2:
   - 'The element-collection factory on the list component is renamed to makeCollection(). Larajax 3.0 adds a static make() factory to the view-component trait that Cms\Classes\ComponentBase uses, so a component declaring its own non-static make() is a fatal error at class declaration. Twig call sites become Alias.makeCollection(...).'
+1.0.3:
+  - 'Idea and IdeaItem are registered with MightySeo (app.seo_models, app.seo_items): the idea form gets the SEO tab and the idea page renders per-idea or page-level SEO templates with {{ idea.* }} variables.'
